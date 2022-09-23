@@ -16,6 +16,12 @@ docker exec -it flink-worker bash
 ## Combine Job with Maven
 ```bash
 # Build flink job and skip tests by using
+# Must contain and config the pom.xml file
 mvn clean install -DskipTests
+```
+
+## Combine Job with SBT
+```bash
+sbt assembly
 ```
 

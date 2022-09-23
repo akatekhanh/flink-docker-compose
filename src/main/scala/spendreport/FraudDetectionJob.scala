@@ -35,7 +35,7 @@ object FraudDetectionJob {
 
     val transactions: DataStream[Transaction] = env
       .addSource(new TransactionSource)
-      .name("transactions")
+      .name("transactions-rename")
 
     val alerts: DataStream[Alert] = transactions
       .keyBy(transaction => transaction.getAccountId)
